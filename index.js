@@ -27,7 +27,7 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/checkout", stripeRoutes);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log(`Listening to EXPRESS http://localhost:${process.env.PORT}`);
+  console.log(`Listening to EXPRESS`);
   mongoose
     .connect(process.env.MONGODB_URI, {
       useNewURLParser: true,
