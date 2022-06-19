@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const OrderModel = require("../models/OrderModel");
+const OrderModel = require("../models/OrderModel.js");
 const stripe = require("stripe")("sk_test_51L9EcaSIOH2wvcof0Nhmo4zwTaV70m5MuGuB7cMsaBi5BTsPA7qaLldGPperMY9GzB9YA3LqWWE4kTq2Z6oKV6Vl00zhehRaon");
 
 const pay = async (req, res) => {
