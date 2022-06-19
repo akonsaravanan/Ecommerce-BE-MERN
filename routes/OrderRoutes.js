@@ -1,6 +1,6 @@
 const express = require("express");
-const { getIncomeStatistics, createOrder, updateOrder, deleteOrder, getOrderById, getAllOrders } = require("../controllers/OrderController");
-const { TokenAuthenticationUser, TokenAuthenticationAdmin, verifyToken } = require("../middlewares/authentication");
+const { getIncomeStatistics, createOrder, updateOrder, deleteOrder, getOrderById, getAllOrders } = require("../controllers/OrderController.js");
+const { TokenAuthenticationUser, TokenAuthenticationAdmin, verifyToken } = require("../middlewares/authentication.js");
 const router = express.Router();
 
 router.get("/find/:id", getOrderById); //get Order by user id

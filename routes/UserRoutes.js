@@ -9,7 +9,7 @@ const {
   getRecentFiveUsers,
   getUserCreationStatistics,
 } = require("../controllers/UserController.js");
-const { TokenAuthenticationUser, TokenAuthenticationAdmin } = require("../middlewares/authentication");
+const { TokenAuthenticationUser, TokenAuthenticationAdmin } = require("../middlewares/authentication.js");
 const router = express.Router();
 
 router.get("/find/:id", TokenAuthenticationAdmin, getUserById);
