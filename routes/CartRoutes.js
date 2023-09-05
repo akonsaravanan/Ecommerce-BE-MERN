@@ -1,6 +1,16 @@
 const express = require("express");
-const { createCart, updateCart, deleteCart, getCartById, getAllCarts } = require("../controllers/CartController.js");
-const { TokenAuthenticationUser, TokenAuthenticationAdmin, verifyToken } = require("../middlewares/authentication.js");
+const {
+	createCart,
+	updateCart,
+	deleteCart,
+	getCartById,
+	getAllCarts,
+} = require("../controllers/CartController.js");
+const {
+	TokenAuthenticationUser,
+	TokenAuthenticationAdmin,
+	verifyToken,
+} = require("../middlewares/authentication.js");
 const router = express.Router();
 
 router.put("/:id", verifyToken, updateCart); // cart id

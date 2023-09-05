@@ -17,7 +17,7 @@ app.use(bodyParser.json({ limit: "100mb" }));
 app.use(bodyParser.urlencoded({ limit: "100mb", extended: true, parameterLimit: 102400 }));
 
 app.get("/", (req, res) => {
-  res.send("Hello Welcome Sara");
+	res.send("Hello Welcome Sara");
 });
 
 app.use("/api/user", userRoutes);
@@ -27,13 +27,13 @@ app.use("/api/orders", orderRoutes);
 app.use("/api/checkout", stripeRoutes);
 
 app.listen(process.env.PORT || 5000, () => {
-  console.log(`Listening to EXPRESS`);
-  mongoose
-    .connect(process.env.MONGODB_URI, {
-      useNewURLParser: true,
-    })
-    .then(() => {
-      console.log("MONGO-DB Connection Successfull");
-    })
-    .catch((err) => console.log(err.message + "server not able to connect"));
+	console.log(`Listening to EXPRESS`);
+	mongoose
+		.connect(process.env.MONGODB_URI, {
+			useNewURLParser: true,
+		})
+		.then(() => {
+			console.log("MONGO-DB Connection Successfull");
+		})
+		.catch((err) => console.log(err.message + "server not able to connect"));
 });
